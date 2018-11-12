@@ -1,0 +1,181 @@
+<div class="section">
+  <h1 class="primary-heading"># # SVG Examples</h1>
+
+  <div class="division">
+    <h2 class="secondary-heading">Rectangles</h2>
+    <svg width="100%" height="300">
+      <rect width="100" height="100" fill="#f44336" stroke="#8bc34a" stroke-width="5" x="25" y="25"></rect>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Circle</h2>
+    <svg width="100%" height="300">
+      <circle r="100" cx="105" cy="105" fill="#f44336" stroke="#8bc34a" stroke-width="5"></circle>
+    </svg>
+  </div>
+
+
+  <div class="division">
+    <h2 class="secondary-heading">Ellipse</h2>
+    <svg width="100%" height="300">
+      <ellipse rx="200" ry="100" cx="205" cy="105" fill="#f44336" stroke="#8bc34a" stroke-width="5"></ellipse>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Line</h2>
+    <svg width="100%" height="300">
+      <line x1="25" y1="25" x2="200" y2="200" stroke="#8bc34a" stroke-width="5"></line>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Polygons</h2>
+    <svg width="100%" height="300">
+      <polygon points="220,10 123,234 300,210 170,250" fill="#f44336" stroke="#8bc34a" stroke-width="5"></polygon>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Polylines</h2>
+    <svg width="100%" height="300">
+      <polyline points="220,10 123,234 300,210 170,250" fill="none" stroke="#8bc34a" stroke-width="5"></polyline>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Paths : Structure</h2>
+    <svg width="100%" height="300">
+      <path d="
+        M100,100
+        L300,150
+        L300,300
+        Z
+        M150,200
+        L30,30,
+        L10,200
+        Z
+        "
+        fill="none" stroke="#8bc34a" stroke-width="5"></path>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Paths : Quadratic Curve</h2>
+    <svg width="100%" height="500">
+      <path d="
+          M100,100
+          L300,150
+          L300,300
+          Q200,400 100,200
+          " fill="none"
+        stroke="#8bc34a" stroke-width="5"></path>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Paths : Quadratic Curve : Relative</h2>
+    <svg width="100%" height="500">
+      <path d="
+            m100,100
+            l300,150
+            l300,300
+            q200,400 100,200
+            "
+        fill="none" stroke="#8bc34a" stroke-width="5"></path>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">SVG Text</h2>
+    <svg width="100%" height="300">
+      <a xlink:href="">
+        <text x="50" y="50" fill="#f44336" font-size="30">
+          Hello World!
+          <tspan x="50" y="100">Second Line</tspan>
+        </text>
+      </a>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Definition</h2>
+    <svg width="100%" height="300">
+      <defs>
+        <rect height="50" width="50" x="0" y="0" id="rectangle-1"></rect>
+      </defs>
+      <use xlink:href="#rectangle-1" x="100" y="100"></use>
+      <use xlink:href="#rectangle-1" x="200" y="200"></use>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Groups</h2>
+    <svg width="100%" height="300">
+      <defs>
+        <g id="rectangle-2">
+          <rect height="50" width="50"></rect>
+          <rect height="50" width="50" x="50" fill="blue"></rect>
+        </g>
+      </defs>
+      <use xlink:href="#rectangle-2"></use>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Text Paths</h2>
+    <svg width="100%" height="300">
+      <defs>
+        <path id="custom-text" d="M0,0 L300,300"></path>
+      </defs>
+      <text x="100" y="100" stroke="#000" font-size="30">
+        <textPath xlink:href="#custom-text">
+          Hello World!
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">Text Paths : Curve</h2>
+    <svg width="100%" height="300">
+      <defs>
+        <path id="custom-text-2" d="M0,0 Q0,100 150,100"></path>
+      </defs>
+      <text x="10" y="100" stroke="#000" font-size="30">
+        <textPath xlink:href="#custom-text-2">
+          Hello World!
+        </textPath>
+      </text>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">SVG Clip Paths</h2>
+    <svg width="100%" height="500">
+      <defs>
+        <clipPath id="custome-clip-path">
+          <rect x="250" y="250" width="200" height="200"></rect>
+        </clipPath>
+      </defs>
+      <circle cx="250" cy="250" r="200" fill="#f44336" clip-path="url(#custome-clip-path)"></circle>
+    </svg>
+  </div>
+
+  <div class="division">
+    <h2 class="secondary-heading">SVG Clip Paths: Visualization</h2>
+    <svg width="100%" height="500">
+      <defs>
+        <clipPath id="custome-clip-path">
+          <rect x="250" y="250" width="200" height="200"></rect>
+        </clipPath>
+      </defs>
+      <circle cx="250" cy="250" r="200" fill="blue" clip-path="url(#custome-clip-path)"></circle>
+
+      <!-- Visualization -->
+      <rect x="250" y="250" width="200" height="200" fill="none" stroke="#000" stroke-width="5"></rect>
+      <circle cx="250" cy="250" r="200" fill="none" stroke="#f44336" stroke-width="5"></circle>
+    </svg>
+  </div>
+</div>
